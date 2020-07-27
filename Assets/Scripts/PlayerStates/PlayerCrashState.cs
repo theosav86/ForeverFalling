@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCrashState : PlayerBaseState
 {
+    //Player crashed run player's death method
     public override void EnterState(PlayerController player)
     {
         player.PlayerDeath();
