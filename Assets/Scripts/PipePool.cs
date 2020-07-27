@@ -18,7 +18,6 @@ public class PipePool : MonoBehaviour
         Instance = this;
     }
 
-
     //We call this method when we want to spawn a new pipe.
     public PipeController Get()
     {
@@ -42,7 +41,7 @@ public class PipePool : MonoBehaviour
     }
 
     //Instead of destroying the pipe we return it to the pool
-    private void ReturnToPool(PipeController pipeController)
+    public void ReturnToPool(PipeController pipeController)
     {
         pipeController.gameObject.SetActive(false);
         pipes.Enqueue(pipeController);

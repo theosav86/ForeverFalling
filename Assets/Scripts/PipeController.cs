@@ -15,4 +15,12 @@ public class PipeController : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.CompareTag("Player"))
+        {
+            PipePool.Instance.ReturnToPool(this);
+        }
+    }
 }
