@@ -7,7 +7,9 @@ public class PipePool : MonoBehaviour
     [SerializeField]
     private PipeController pipePrefab;
 
-    private Queue<PipeController> pipes = new Queue<PipeController>(); 
+    private Queue<PipeController> pipes = new Queue<PipeController>();
+
+    public int poolCount;
 
 
     //basic singleton of PipePool

@@ -19,7 +19,7 @@ public class PipeController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnCollisionExit(Collision collider)
     {
         if(collider.gameObject.CompareTag("Player"))
         {
