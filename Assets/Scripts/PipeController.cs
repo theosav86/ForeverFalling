@@ -7,6 +7,8 @@ public class PipeController : MonoBehaviour
 
     private Vector3 pipeOffSet = new Vector3(0, 0, 100f);
 
+    public Transform newPipeSpawnPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +21,11 @@ public class PipeController : MonoBehaviour
         
     }
 
-    private void OnCollisionExit(Collision collider)
+    private void OnTriggerExit(Collider collider)
     {
         if(collider.gameObject.CompareTag("Player"))
         {
             PipePool.Instance.ReturnToPool(this);
         }
-
-        PipeController newPipe = PipePool.Instance.Get();
-        newPipe.transform.position = transform.position + pipeOffSet;
-        newPipe.transform.rotation = transform.rotation;
-        newPipe.gameObject.SetActive(true);
     }
 }
