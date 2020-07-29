@@ -9,7 +9,7 @@ public class PipePool : MonoBehaviour
 
     private Queue<PipeController> pipes = new Queue<PipeController>();
 
-    public int poolCount;
+    //public int poolCount;
 
 
     //basic singleton of PipePool
@@ -25,7 +25,7 @@ public class PipePool : MonoBehaviour
     {
         if (pipes.Count == 0)
         {
-            AddPipe(1);
+            AddPipe(2);
         }
 
         return pipes.Dequeue();

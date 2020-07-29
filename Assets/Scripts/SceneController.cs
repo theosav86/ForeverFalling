@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-//THIS CLASS SHOULD SPAWN A NUMBER OF PIPES
-//EACH PIPE SHOULD HAVE A RANDOM OBSTACLE FROM AN OBSTACLE POOL OR ARRAY OR LIST OR W/E
+//THIS CLASS NOW WORKS AS A HUD CONTROLLER MOSTLY... MOSTLY...
+
 
 
 public class SceneController : MonoBehaviour
@@ -13,6 +13,10 @@ public class SceneController : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI deathText;
+
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+
     // Start is called before the first frame update
     void Start()
     {
