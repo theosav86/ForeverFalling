@@ -52,8 +52,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-        axisInput.x = Input.GetAxisRaw("Horizontal");
-        axisInput.y = Input.GetAxisRaw("Vertical");
+        axisInput.x = Input.GetAxis("Horizontal");
+        axisInput.y = Input.GetAxis("Vertical");
         axisInput.z = playerFallSpeed * speedBoostMultiplier;
 
         currentState.Update(this);
@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
     //Player movement function with WASD or arrow keys
     private void PlayerMovement()
     {
+        //playerRigidbody.velocity = axisInput * playerMoveSpeed * Time.fixedDeltaTime; //
         playerRigidbody.MovePosition(playerRigidbody.position + axisInput * playerMoveSpeed * Time.fixedDeltaTime);
     }
 

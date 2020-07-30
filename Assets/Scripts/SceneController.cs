@@ -11,11 +11,9 @@ using TMPro;
 public class SceneController : MonoBehaviour
 {
 
-    [SerializeField]
-    private TextMeshProUGUI deathText;
+    public TextMeshProUGUI deathText;
 
-    [SerializeField]
-    private TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreText;
 
     // Start is called before the first frame update
     void Start()
