@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6472781384139113917}
   - component: {fileID: 7074851829543146174}
   - component: {fileID: 8963936390183017723}
-  - component: {fileID: 8347413797237022905}
   - component: {fileID: 713451569}
   - component: {fileID: 713451568}
+  - component: {fileID: 6933139433751210949}
+  - component: {fileID: 6025023375793538159}
   m_Layer: 0
   m_Name: Quaternion
   m_TagString: Untagged
@@ -3132,20 +3133,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &8347413797237022905
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5833182439225947397}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!54 &713451569
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3173,7 +3160,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -9.500002, y: 4.750001, z: 0}
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -3197,3 +3184,29 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!65 &6933139433751210949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5833182439225947397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7, y: 16.92, z: 1.96}
+  m_Center: {x: -0.18, y: 0.23, z: 0}
+--- !u!65 &6025023375793538159
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5833182439225947397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.500008, y: 1.8, z: 1}
+  m_Center: {x: 0, y: 0.6, z: 0}

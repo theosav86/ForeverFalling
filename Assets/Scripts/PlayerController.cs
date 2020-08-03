@@ -12,9 +12,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float playerMoveSpeed = 20f;
 
-    public float speedBoostMultiplier;
+    public float speedBoostMultiplier = 1f;
 
-    public float playerFallSpeed = 1f;
+    public float playerFallSpeed = 10f;
 
     private Vector3 axisInput;
 
@@ -68,9 +68,12 @@ public class PlayerController : MonoBehaviour
     //Player movement function with WASD or arrow keys
     private void PlayerMovement()
     {
-        //playerRigidbody.velocity = axisInput * playerMoveSpeed * Time.fixedDeltaTime; //
-        playerRigidbody.MovePosition(playerRigidbody.position + axisInput * playerMoveSpeed * Time.fixedDeltaTime);
+        //  playerRigidbody.AddForce(axisInput * playerMoveSpeed, ForceMode.Acceleration);
+        // playerRigidbody.MovePosition(playerRigidbody.position + axisInput * playerMoveSpeed * Time.fixedDeltaTime);
+
+        playerRigidbody.MovePosition(playerRigidbody.position + axisInput * playerMoveSpeed * Time.deltaTime);
     }
+
 
     //Method to swap states
     public void TransitionToState(PlayerBaseState state)

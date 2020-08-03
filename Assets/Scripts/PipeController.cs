@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PipeController : MonoBehaviour
 {
-
+    public static PipePool pipePool;
     private Vector3 pipeOffSet = new Vector3(0, 0, 100f);
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class PipeController : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Player"))
         {
-            //PipePool.ReturnToPool(this);
+            pipePool.ReturnToPool(this);
         }
     }
 }
